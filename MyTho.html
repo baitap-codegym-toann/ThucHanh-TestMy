@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>America</title>
+</head>
+<body>
+<h1 align="center">nhập mã cần kiểm tra</h1>
+<br>
+<p align="center">
+    <input id="input" type="text" value="">
+</p>
+<script>
+    let reg = /^[0-9]{5}(?:-[0-9]{4})?$/;
+    document.getElementById("input").addEventListener("keydown",function (e) {
+        if (e.key === "Enter"){
+            if (reg.test(document.getElementById("input").value)){
+                alert("chuẩn rồi man");
+            }else {
+                alert("không chuẩn lắm man");
+            }
+            document.getElementById("input").value = "";
+        } 
+    })
+</script>
+</body>
+</html>
